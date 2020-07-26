@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('garen.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 150px 0;
+    color: #151515;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login{
+    padding: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 100px);
+    width: calc(400px - 100px);
+    background-color: #f9f9f9;
+}
+
+.login img{
+    width: 60px;
+}
+
+.login h1{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.login input{
+    width: calc(100% - 30px);
+    background-color: #ebebeb;
+    line-height: 15px;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.login input:hover{
+    background-color: rgb(225, 225, 225);    
+    transition: 0.1s;
+}
+
+.login input:hover::placeholder{
+    color: rgb(120, 120, 120);    
+    transition: 0.1s;
+}
+
+.login input::placeholder{
+    color: rgb(160, 160, 160);
+}
+
+.login input + input{
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.checkbox{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    color: #a0a0a0;
+    cursor: pointer;
+    height: 15px;
+    line-height: 15px;
+    padding-left: 25px;
+
+    user-select: none;
+}
+
+.checkbox:hover{
+    color: rgb(120, 120, 120);    
+    transition: 0.1s;
+}
+
+.checkbox:hover .checkmark{
+    background-color: rgb(225, 225, 225);    
+    transition: 0.1s;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #ebebeb;
+    border-radius: 2px;
+}
+
+/* When the checkbox is checked, add a red background */
+.checkbox input:checked ~ .checkmark {
+    background-color: #c81e1e;
+}
+
+.checkbox input:checked ~ .teste {
+    color: #151515;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+
+  /* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.button{
+    border: 2px solid #ebebeb;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    text-align: center;
+    color: #ebebeb;
+    font-family: monospace;
+    font-size:  40px;
+
+
+}
+
+.login a{
+
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    font-size: 11px;
+    font-weight: 700;
+    display: block;
+}
+
+.login a + a{
+    margin-top: 4px;
+} 
+
+.login a:hover, .login a + a:hover{
+    color: #151515;
+}
+
+.login a + a + a{
+    position: relative;
+    top: -15px;
+    float: right;
+    color: rgb(190, 190, 190);
+}
+
+.login a + a + a:hover{
+    color: rgb(160, 160, 160);
+}
